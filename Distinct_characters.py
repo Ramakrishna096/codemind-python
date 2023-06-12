@@ -1,15 +1,11 @@
-s = input().lower()
-a = ''
-for i in set(s):
-    if s.count(i)==1:
-        a+=i
-a = list(a)
-a.sort()
-a = str(a)
-a=a.replace(" ","")
-a=a.replace("'","")
-a=a.replace("[","")
-a=a.replace("]","")
-a=a.replace(" ","")
-a=a.replace(",","")
-print(a)
+n=input().lower()
+k=list(n)
+l=[]
+for i in k:
+    if i!=" ":
+        l.append(i)
+k=list(set(l))
+k.sort()
+
+for i in range(len(k)):
+    print(k[i],end="")
