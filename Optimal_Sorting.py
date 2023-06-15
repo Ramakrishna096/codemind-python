@@ -1,13 +1,14 @@
-t = int(input())
-while t:
-    n = int(input())
-    arr = list(map(int,input().split()))
-    c = 0
-    for i in range(1,n):
-        if arr[i-1]>arr[i]:
-            c+=1
-    if c==0:
-        print(c)
+t=int(input())
+for i in range(t):
+    n=int(input())
+    l=list(map(int,input().split()))
+    ll=sorted(l)
+    c=0
+    for i in range(n):
+        if l[i]!=ll[i]:
+            c=1
+    if c==1:
+        print(max(l)-min(l))
     else:
-        print(max(arr)-min(arr))
-    t-=1
+        print("0")
+    
